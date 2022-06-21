@@ -5,7 +5,7 @@ const Model = require("../Model/boardgameModel");
 const router = express.Router();
 
 //GET collection
-router.get("/", (req, res) => {
+router.get("/", verifyToken, (req, res) => {
   Model.find()
     .exec()
     .then((data) => {
@@ -44,55 +44,54 @@ router.get("/:id", (req, res) => {
     });
 });
 //POST insert document
-router.post("/", verifyToken, generateToken, (req, res) => {
-  const data = new Model({
-    name: req.body.name,
-    editorial: req.body.editorial,
-    author: req.body.author,
-    numPlayers: req.body.numPlayers,
-    avgMinDuration: req.body.avgMinDuration,
-    minAgeRecommended: req.body.minAgeRecommended,
-    expansions: req.body.expansions,
-    game_name: req.body.game_name
- 
-  });
-  let role = payload[0].role
-  console.log(role)
-  if (role == 'admin') {
-  data
+router.post(
+  "/",
+  verifyToken,
+  (req, res) => {
+    if (req.payload.role == "admin") {
+    data
     .save()
     .then((data) => {
-      res.status(201).json({
-        status: "succeeded",
-        data,
-        error: null,
-      });
-    })
-    .catch((error) => {
-      res.status(404).json({
-        status: "failed",
-        data,
-        error: "the insertion has failed",
-      });
-    });
-  }else{
-    data
-    .then((error) => {
+          res.status(201).json({
+            status: "succeeded",
+            data,
+            error: null,
+          });
+        })
+        .catch((error) => {
+          res.status(404).json({
+            status: "failed",
+            data,
+            error: "the insertion has failed",
+          });
+        });
+    } else {
       res.status(403).json({
-        status: "fail",
-        data,
-        error: 'you do not have permissions',
+        status: "failed",
+        data: [],
+        error: "You do not have permissions",
       });
-    })
+    }
+    const data = new Model({
+      name: req.body.name,
+      editorial: req.body.editorial,
+      author: req.body.author,
+      numPlayers: req.body.numPlayers,
+      avgMinDuration: req.body.avgMinDuration,
+      minAgeRecommended: req.body.minAgeRecommended,
+      expansions: req.body.expansions,
+      game_name: req.body.game_name,
+    });
   }
-});
+);
 //PATCH update document
-router.patch("/:id", (req, res) => {
+router.patch("/:id", verifyToken, (req, res) => {
   let id = req.params.id;
   let data = req.body;
   let options = {
     new: true,
   };
+  if (req.payload.role == "admin") {
   Model.findByIdAndUpdate(id, data, options)
     .then((data) => {
       res.status(201).json({
@@ -108,10 +107,18 @@ router.patch("/:id", (req, res) => {
         error: "the update has failed",
       });
     });
+  }else {
+    res.status(403).json({
+      status: "failed",
+      data: [],
+      error: "You do not have permissions",
+    });
+  }
 });
 //Delete by id
-router.delete("/:id", (req, res) => {
+router.delete("/:id", verifyToken, (req, res) => {
   let id = req.params.id;
+  if (req.payload.role == "admin") {
   Model.findByIdAndDelete(id)
     .then((data) => {
       res.status(201).json({
@@ -127,6 +134,13 @@ router.delete("/:id", (req, res) => {
         error: "deletion has failed",
       });
     });
+  }else {
+    res.status(403).json({
+      status: "failed",
+      data: [],
+      error: "You do not have permissions",
+    });
+  }
 });
 
 //export

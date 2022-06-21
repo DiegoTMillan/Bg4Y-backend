@@ -1,5 +1,5 @@
 const express = require("express");
-const Model = require("../Model/loginModel");
+const Model = require("../Model/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
@@ -8,10 +8,15 @@ const { generateToken, verifyRefreshToken } = require("../lib/utils");
 //user registrer
 router.post("/new", async (req, res) => {
   const data = new Model({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
     email: req.body.email,
-    //encrypting
     password: await bcrypt.hash(req.body.password, 10),
+    phone: req.body.phone,
+    city: req.body.city,
+    district: req.body.district,
     role: req.body.role,
+
   });
   data
     .save()
@@ -42,7 +47,7 @@ router.post("/", (req, res) => {
           result[0].password,
           (error, response) => {
             if (error) {
-              ResizeObserver.status(404).json({
+              res.status(404).json({
                 status: "failed",
                 data: result[0],
                 error: error.message,
@@ -60,7 +65,7 @@ router.post("/", (req, res) => {
             } else {
               res.status(403).json({
                 status: "failed",
-                data,
+                data:[],
                 error: "Wrong username or password",
               });
             }
@@ -69,7 +74,7 @@ router.post("/", (req, res) => {
       } else {
         res.status(403).json({
           status: "failed",
-          data,
+          data:[],
           error: "Wrong username or password",
         });
       }
