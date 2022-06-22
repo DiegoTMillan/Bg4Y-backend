@@ -52,19 +52,19 @@ router.post(
     data
     .save()
     .then((data) => {
-          res.status(201).json({
-            status: "succeeded",
-            data,
-            error: null,
-          });
-        })
-        .catch((error) => {
-          res.status(404).json({
-            status: "failed",
-            data,
-            error: "the insertion has failed",
-          });
-        });
+      res.status(201).json({
+        status: "succeeded",
+        data,
+        error: null,
+      });
+    })
+    .catch((error) => {
+      res.status(404).json({
+        status: "failed",
+        data,
+        error: "the insertion has failed",
+      });
+    });
     } else {
       res.status(403).json({
         status: "failed",

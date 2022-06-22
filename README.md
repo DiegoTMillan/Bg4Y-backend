@@ -54,32 +54,12 @@ npm i bcrypt jsonwebtoken --save
 git clone https://github.com/DiegoTMillan/Bg4Y-backend.git
 ```
 
-  4. ### Files
+  4. ### Install node_modules
 
-because of gitignore there some files that you have to create
-
-  - secret.js
-
-It's necessary for node secret. Here is the structure.
+node_modules is included in gitignore because is too heavy, but with this simple command in this directory it will be installed.
 
 ```
-console.log(
-    require("crypto")
-      .createHmac("choose an online hash function", "write something")
-      .update("write something")
-      .digest("hex")
-  );
-```
-
-  - .env
-
-here you will indicate the connection with the database and the encrypted code for secret and
-refresh secret that you have created with the code in secret.js and the command node secret.
-
-```
-DATABASE_URL = mongodb://localhost:PortNumber/nameOfDatabase
-SECRET = xxxx
-REFRESH_SECRET = xxx
+npm install
 ```
 
 ## Basic Structure :bookmark_tabs:
@@ -123,12 +103,12 @@ for author, and expansions I prefer to use arrays because there is variety with 
 
 - An example of a user document:
 
-```{  "_id": {    "$oid": "11111111111111"  },
-"first_name": "XXXXX",
-"last_name": "XXXXX",
-"email": "xxxxx@xxxxxxx.com",
-"password": "admin",
-"phone": "xxx-xxx-xxxx",
+```{  "_id": {    "$oid": "62b1f8995b79a0732eb33337"  },
+"first_name": "Jamaal",
+"last_name": "Wheatland",
+"email": "jwheatland2@t.co",
+"password": "$2b$10$H6ugxPjrmhTSten2iJt.W.ayFQXdIlL.D018Xlmg.0CXAqXTGFGNW",
+"phone": "277-240-8739",
 "city": "Marbella",
 "district": "Malaga",
 "role": "admin"}
@@ -145,14 +125,6 @@ for author, and expansions I prefer to use arrays because there is variety with 
 
 3. ### Login 
 
-- An example of login document:
-
-```{  "_id": {    "$oid": "xxxxxxxxxxxxxxxx"  },
-"email": "xxxxx@xxxxxxx.com",
-"password": "(an encrypted password)",
-"role": "admin"}
-```
-
 - An example of login endpoints:
 
 |URL|TYPE|DESCRIPTION|ROLE|
@@ -160,15 +132,6 @@ for author, and expansions I prefer to use arrays because there is variety with 
 |127.0.0.1:8000/login/new|POST|register of a new login|user and admin|
 |127.0.0.1:8000/login|POST|just login with user and password|user and admin|
 |127.0.0.1:8000/login/refresh|POST|refresh token|user and admin|
-
-## Gitignore :no_entry:
-
-Obviously everything is not on this respository. The weight of some directories and security are the most important reasons. Therefor here is a list
-with that elements that are not here.
-- node modules
-- .env
-- secret.js
-- package-lock.json
 
 
 
