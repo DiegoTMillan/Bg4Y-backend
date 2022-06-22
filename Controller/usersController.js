@@ -6,6 +6,7 @@ const router = express.Router();
 
 //GET collection
 router.get("/", verifyToken, (req, res) => {
+  if (req.payload.role == "admin") {
   Model.find()
     .exec()
     .then((data) => {
@@ -23,9 +24,17 @@ router.get("/", verifyToken, (req, res) => {
         error: error.message,
       });
     });
+  }else {
+    res.status(403).json({
+      status: "failed",
+      data: [],
+      error: "You do not have permissions",
+    });
+  }
 });
 //GET details
 router.get("/:id", verifyToken, (req, res) => {
+  if (req.payload.role == "admin") {
   Model.findById(req.params.id)
     .exec()
     .then((data) => {
@@ -42,9 +51,17 @@ router.get("/:id", verifyToken, (req, res) => {
         error: "the id is wrong",
       });
     });
+  }else{
+    res.status(403).json({
+      status: "failed",
+      data: [],
+      error: "You do not have permissions",
+    });
+  }
 });
 //POST insert document
 router.post("/", verifyToken, (req, res) => {
+  if (req.payload.role == "admin") {
   const data = new Model({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -67,10 +84,17 @@ router.post("/", verifyToken, (req, res) => {
     .catch((error) => {
       res.status(404).json({
         status: "failed",
-        data,
+        data: [],
         error: "the insertion has failed",
       });
     });
+  }else{
+      res.status(403).json({
+        status: "failed",
+        data:[],
+        error: "you have not permissions",
+      });
+  }
 });
 //PATCH update document
 router.patch("/:id", verifyToken, (req, res) => {
@@ -98,6 +122,7 @@ router.patch("/:id", verifyToken, (req, res) => {
 //Delete by id
 router.delete("/:id", verifyToken, (req, res) => {
   let id = req.params.id;
+  if (req.payload.role == "admin") {
   Model.findByIdAndDelete(id)
     .then((data) => {
       res.status(201).json({
@@ -113,6 +138,13 @@ router.delete("/:id", verifyToken, (req, res) => {
         error: "deletion has failed",
       });
     });
+  }else {
+    res.status(403).json({
+      status: "failed",
+      data: [],
+      error: "You do not have permissions",
+    });
+  }
 });
 
 //export

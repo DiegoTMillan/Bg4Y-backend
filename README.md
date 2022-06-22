@@ -69,14 +69,15 @@ In one hand, I know that symfony and mysql are popular
 and very useful, but, in the other hand, I think that my choice is more flexible and I am very keen on this tecnologies. 
 In fact, I feel very comfortable working with them.
 
-Obviously I will show some examples about the structure of the backend with de boardgames, users and login.
+Obviously I will show some examples about the structure of the backend with the boardgames, users and login.
 
   1. ### Boardgames
 
   - An example of a boardgame document
 
 ```
-{  "_id": {    "$oid": "62a99ad2e91b40cf1693598b"  },
+{  
+"_id": {    "$oid": "62a99ad2e91b40cf1693598b"  },
 "name": "maracaibo",
 "editorial": "masqueoca",
 "author": ["Alexander Pfister"],
@@ -85,7 +86,8 @@ Obviously I will show some examples about the structure of the backend with de b
   "max": 4  },
  "avgMinDuration": 120,
  "minAgeRecommended": 12,
- "expansions": []}
+ "expansions": []
+}
 ```
 for author, and expansions I prefer to use arrays because there is variety with data numbers.
 
@@ -103,7 +105,9 @@ for author, and expansions I prefer to use arrays because there is variety with 
 
 - An example of a user document:
 
-```{  "_id": {    "$oid": "62b1f8995b79a0732eb33337"  },
+```
+{  
+"_id": {    "$oid": "62b1f8995b79a0732eb33337"  },
 "first_name": "Jamaal",
 "last_name": "Wheatland",
 "email": "jwheatland2@t.co",
@@ -111,7 +115,8 @@ for author, and expansions I prefer to use arrays because there is variety with 
 "phone": "277-240-8739",
 "city": "Marbella",
 "district": "Malaga",
-"role": "admin"}
+"role": "admin"
+}
 ```
 - a table with users endpoints:
 

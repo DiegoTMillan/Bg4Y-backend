@@ -44,34 +44,8 @@ router.get("/:id", (req, res) => {
     });
 });
 //POST insert document
-router.post(
-  "/",
-  verifyToken,
-  (req, res) => {
-    if (req.payload.role == "admin") {
-    data
-    .save()
-    .then((data) => {
-      res.status(201).json({
-        status: "succeeded",
-        data,
-        error: null,
-      });
-    })
-    .catch((error) => {
-      res.status(404).json({
-        status: "failed",
-        data,
-        error: "the insertion has failed",
-      });
-    });
-    } else {
-      res.status(403).json({
-        status: "failed",
-        data: [],
-        error: "You do not have permissions",
-      });
-    }
+router.post("/", verifyToken, (req, res) => {
+  if (req.payload.role == "admin") {
     const data = new Model({
       name: req.body.name,
       editorial: req.body.editorial,
@@ -82,8 +56,30 @@ router.post(
       expansions: req.body.expansions,
       game_name: req.body.game_name,
     });
+    data
+      .save()
+      .then((data) => {
+        res.status(201).json({
+          status: "succeeded",
+          data,
+          error: null,
+        });
+      })
+      .catch((error) => {
+        res.status(404).json({
+          status: "failed",
+          data,
+          error: "the insertion has failed",
+        });
+      });
+  } else {
+    res.status(403).json({
+      status: "failed",
+      data: [],
+      error: "You do not have permissions",
+    });
   }
-);
+});
 //PATCH update document
 router.patch("/:id", verifyToken, (req, res) => {
   let id = req.params.id;
@@ -92,22 +88,22 @@ router.patch("/:id", verifyToken, (req, res) => {
     new: true,
   };
   if (req.payload.role == "admin") {
-  Model.findByIdAndUpdate(id, data, options)
-    .then((data) => {
-      res.status(201).json({
-        status: "succeeded",
-        data,
-        error: null,
+    Model.findByIdAndUpdate(id, data, options)
+      .then((data) => {
+        res.status(201).json({
+          status: "succeeded",
+          data,
+          error: null,
+        });
+      })
+      .catch((error) => {
+        res.status(404).json({
+          status: "failed",
+          data,
+          error: "the update has failed",
+        });
       });
-    })
-    .catch((error) => {
-      res.status(404).json({
-        status: "failed",
-        data,
-        error: "the update has failed",
-      });
-    });
-  }else {
+  } else {
     res.status(403).json({
       status: "failed",
       data: [],
@@ -119,22 +115,22 @@ router.patch("/:id", verifyToken, (req, res) => {
 router.delete("/:id", verifyToken, (req, res) => {
   let id = req.params.id;
   if (req.payload.role == "admin") {
-  Model.findByIdAndDelete(id)
-    .then((data) => {
-      res.status(201).json({
-        status: "succeeded",
-        data,
-        error: null,
+    Model.findByIdAndDelete(id)
+      .then((data) => {
+        res.status(201).json({
+          status: "succeeded",
+          data,
+          error: null,
+        });
+      })
+      .catch((error) => {
+        res.status(404).json({
+          status: "failed",
+          data,
+          error: "deletion has failed",
+        });
       });
-    })
-    .catch((error) => {
-      res.status(404).json({
-        status: "failed",
-        data,
-        error: "deletion has failed",
-      });
-    });
-  }else {
+  } else {
     res.status(403).json({
       status: "failed",
       data: [],
