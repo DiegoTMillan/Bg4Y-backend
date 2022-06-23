@@ -1,5 +1,10 @@
 # Bg4Y-backend :computer:
-Boardgames 4 you Backend
+Boardgames 4 you Backend.\
+This is only the backend of a bigger project. Here is the URL of the other repository:
+  ### Bg4Y-frontend
+  ```
+  https://github.com/DiegoTMillan/Bg4Y-frontend.git
+  ```
 
 ## Presentation :green_book:
 Hi everyone. I am Diego Tapia and this is my final project Boardgames 4 you. Although there are many different areas, probably more insteresting.
