@@ -32,6 +32,9 @@ const userSchema = new mongoose.Schema({
         required: true,
         type: String,
     },
+    photo:{
+        type: String,
+    },
     game_name: {
         type: String,
     }
