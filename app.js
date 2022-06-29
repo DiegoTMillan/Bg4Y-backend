@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const boardgames = require("./Controller/boardgamesController");
 const users = require("./Controller/usersController");
 const login = require("./Controller/loginController")
@@ -30,6 +31,7 @@ const app = express();
 
 //esta funcionalidad nos permite tratar con los json
 app.use(express.json());
+app.use(cors());
 app.use("/boardgames", boardgames);
 app.use("/users", users );
 app.use("/login", login);

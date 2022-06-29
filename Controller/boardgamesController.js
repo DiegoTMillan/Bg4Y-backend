@@ -5,7 +5,8 @@ const Model = require("../Model/boardgameModel");
 const router = express.Router();
 
 //GET collection
-router.get("/", verifyToken, (req, res) => {
+router.get("/", (req, res) => {
+// router.get("/", verifyToken, (req, res) => {
   Model.find()
     .exec()
     .then((data) => {
