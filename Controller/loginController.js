@@ -16,6 +16,8 @@ router.post("/new", async (req, res) => {
     city: req.body.city,
     district: req.body.district,
     role: req.body.role,
+    photo: req.body.photo,
+    game_name: req.body.game_name,
 
   });
   data

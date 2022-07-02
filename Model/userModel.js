@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     game_name: {
-        type: String,
+        type: Array,
     }
 
 })

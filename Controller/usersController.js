@@ -5,8 +5,9 @@ const Model = require("../Model/userModel");
 const router = express.Router();
 
 //GET collection
-router.get("/", verifyToken, (req, res) => {
-  if (req.payload.role == "admin") {
+router.get("/", (req, res) => {
+// router.get("/", verifyToken, (req, res) => {
+  // if (req.payload.role == "admin") {
   Model.find()
     .exec()
     .then((data) => {
@@ -24,17 +25,18 @@ router.get("/", verifyToken, (req, res) => {
         error: error.message,
       });
     });
-  }else {
-    res.status(403).json({
-      status: "failed",
-      data: [],
-      error: "You do not have permissions",
-    });
-  }
+  // }else {
+  //   res.status(403).json({
+  //     status: "failed",
+  //     data: [],
+  //     error: "You do not have permissions",
+  //   });
+  // }
 });
 //GET details
-router.get("/:id", verifyToken, (req, res) => {
-  if (req.payload.role == "admin") {
+router.get("/:id", (req, res) => {
+// router.get("/:id", verifyToken, (req, res) => {
+  // if (req.payload.role == "admin") {
   Model.findById(req.params.id)
     .exec()
     .then((data) => {
@@ -51,13 +53,13 @@ router.get("/:id", verifyToken, (req, res) => {
         error: "the id is wrong",
       });
     });
-  }else{
-    res.status(403).json({
-      status: "failed",
-      data: [],
-      error: "You do not have permissions",
-    });
-  }
+  // }else{
+  //   res.status(403).json({
+  //     status: "failed",
+  //     data: [],
+  //     error: "You do not have permissions",
+  //   });
+  // }
 });
 //POST insert document
 router.post("/", verifyToken, (req, res) => {
