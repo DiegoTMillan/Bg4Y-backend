@@ -18,7 +18,6 @@ router.post("/new", async (req, res) => {
     role: req.body.role,
     photo: req.body.photo,
     game_name: req.body.game_name,
-
   });
   data
     .save()
@@ -59,6 +58,7 @@ router.post("/", (req, res) => {
                 status: "succeeded",
                 //pilo
                 data: {
+                  info: result,
                   token: generateToken(result, false),
                   refreshToken: generateToken(result, true),
                 },
@@ -67,7 +67,7 @@ router.post("/", (req, res) => {
             } else {
               res.status(403).json({
                 status: "failed",
-                data:[],
+                data: [],
                 error: "Wrong username or password",
               });
             }
@@ -76,7 +76,7 @@ router.post("/", (req, res) => {
       } else {
         res.status(403).json({
           status: "failed",
-          data:[],
+          data: [],
           error: "Wrong username or password",
         });
       }
@@ -90,7 +90,7 @@ router.post("/", (req, res) => {
     });
 });
 //refresh token
-router.post("/refresh", verifyRefreshToken,  (req, res) => {
+router.post("/refresh", verifyRefreshToken, (req, res) => {
   try {
     let authHeader = "";
     if (req.headers.hasOwnProperty("authorization")) {
