@@ -35,6 +35,9 @@ const boardgameSchema = new mongoose.Schema(
         expansions: {
             type: Array,
         },
+        photo: {
+            type: Array,
+        }
     },
     {
         versionKey: false,

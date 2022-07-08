@@ -6,12 +6,11 @@ const router = express.Router();
 
 //GET collection
 router.get("/", (req, res) => {
-  // router.get("/", verifyToken, (req, res) => {
   // if (req.payload.role == "admin") {
   Model.find()
     .exec()
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       res.status(200).json({
         status: "succeeded",
         data,
@@ -33,32 +32,8 @@ router.get("/", (req, res) => {
   //   });
   // }
 });
-//GET friends with games
-router.get("/friends", (req, res) => {
-  // router.get("/", verifyToken, (req, res) => {
-  // if (req.payload.role == "admin") {
-  console.log(res);
-  Model.find()
-    .exec()
-    .then((data) => {
-      console.log(data);
-      res.status(200).json({
-        status: "succeeded",
-        data,
-        error: null,
-      });
-    })
-    .catch((error) => {
-      res.status(404).json({
-        status: "failed",
-        data: [],
-        error: error.message,
-      });
-    });
-});
 //GET details
-// router.get("/:id", (req, res) => {
-  router.get("/:id", verifyToken, (req, res) => {
+router.get("/:id", verifyToken, (req, res) => {
   // if (req.payload.role == "admin") {
   Model.findById(req.params.id)
     .exec()
@@ -124,7 +99,8 @@ router.post("/", verifyToken, (req, res) => {
   }
 });
 //PATCH update document
-router.patch("/:id", verifyToken, (req, res) => {
+router.patch("/:id", (req, res) => {
+  console.log(req.body);
   let id = req.params.id;
   let data = req.body;
   let options = {
@@ -132,6 +108,7 @@ router.patch("/:id", verifyToken, (req, res) => {
   };
   Model.findByIdAndUpdate(id, data, options)
     .then((data) => {
+      console.log(data);
       res.status(201).json({
         status: "succeeded",
         data,

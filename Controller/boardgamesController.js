@@ -56,6 +56,7 @@ router.post("/", verifyToken, (req, res) => {
       minAgeRecommended: req.body.minAgeRecommended,
       expansions: req.body.expansions,
       game_name: req.body.game_name,
+      photo: req.body.photo
     });
     data
       .save()
