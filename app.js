@@ -4,7 +4,6 @@ const cors = require("cors");
 const boardgames = require("./Controller/boardgamesController");
 const users = require("./Controller/usersController");
 const login = require("./Controller/loginController");
-const text = require("./Controller/textController")
 
 
 //acceso a las variables de entorno (base de datos por ej.)
@@ -36,7 +35,6 @@ app.use(cors());
 app.use("/boardgames", boardgames);
 app.use("/users", users );
 app.use("/login", login);
-app.use("/text", text);
 
 
 //preparando para escuchar el puerto

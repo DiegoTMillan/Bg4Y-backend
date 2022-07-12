@@ -98,15 +98,15 @@ for author, and expansions I prefer to use arrays because there is variety with 
 
 - A table with boargames endpoints:
 
-|URL|TYPE|DESCRIPTION|ROLE|
-|---|---|------------|----|
-|127.0.0.1:8000/boardgames/|GET|get all items from database|user and admin|
-|127.0.0.1:8000/boardgames/id|GET|get items by id|user and admin|
-|127.0.0.1:8000/boardgames|POST|insert a new document|admin|
-|127.0.0.1:8000/boardgames/id|PATCH|update an item by id|admin|
-|127.0.0.1:8000/boardgames/id|DELETE|delete an item by id|admin|
+|URL|TYPE|DESCRIPTION|
+|---|---|------------|
+|127.0.0.1:8000/boardgames/|GET|get all items from database|
+|127.0.0.1:8000/boardgames/id|GET|get items by id|
+|127.0.0.1:8000/boardgames|POST|insert a new document|
+|127.0.0.1:8000/boardgames/id|PATCH|update an item by id|
+|127.0.0.1:8000/boardgames/id|DELETE|delete an item by id|
 
-2. ### Users
+1. ### Users
 
 - An example of a user document:
 
@@ -125,23 +125,23 @@ for author, and expansions I prefer to use arrays because there is variety with 
 ```
 - a table with users endpoints:
 
-|URL|TYPE|DESCRIPTION|ROLE|
-|---|---|------------|----|
-|127.0.0.1:8000/users/|GET|get all items from database|admin|
-|127.0.0.1:8000/users/id|GET|get items by id|user and admin|
-|127.0.0.1:8000/users|POST|insert a new document|admin|
-|127.0.0.1:8000/users/id|PATCH|update an item by id|admin|
-|127.0.0.1:8000/users/id|DELETE|delete an item by id|admin|
+|URL|TYPE|DESCRIPTION|
+|---|---|------------|
+|127.0.0.1:8000/users/|GET|get all items from database|
+|127.0.0.1:8000/users/id|GET|get items by id|
+|127.0.0.1:8000/users|POST|insert a new document|
+|127.0.0.1:8000/users/id|PATCH|update an item by id|
+|127.0.0.1:8000/users/id|DELETE|delete an item by id|
 
-3. ### Login 
+1. ### Login 
 
 - An example of login endpoints:
 
 |URL|TYPE|DESCRIPTION|ROLE|
 |---|---|------------|----|
-|127.0.0.1:8000/login/new|POST|register of a new login|user and admin|
-|127.0.0.1:8000/login|POST|just login with user and password|user and admin|
-|127.0.0.1:8000/login/refresh|POST|refresh token|user and admin|
+|127.0.0.1:8000/login/new|POST|register of a new login|
+|127.0.0.1:8000/login|POST|just login with user and password|
+|127.0.0.1:8000/login/refresh|POST|refresh token|
 
 
 
