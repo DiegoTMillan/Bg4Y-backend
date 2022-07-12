@@ -137,8 +137,8 @@ for author, and expansions I prefer to use arrays because there is variety with 
 
 - An example of login endpoints:
 
-|URL|TYPE|DESCRIPTION|ROLE|
-|---|---|------------|----|
+|URL|TYPE|DESCRIPTION|
+|---|---|------------|
 |127.0.0.1:8000/login/new|POST|register of a new login|
 |127.0.0.1:8000/login|POST|just login with user and password|
 |127.0.0.1:8000/login/refresh|POST|refresh token|
