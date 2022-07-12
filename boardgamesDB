@@ -1,0 +1,239 @@
+[{
+  "_id": {
+    "$oid": "62a99ad2e91b40cf1693598b"
+  },
+  "name": "Maracaibo",
+  "editorial": "Masqueoca",
+  "author": [
+    "Alexander Pfister"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 4
+  },
+  "avgMinDuration": 120,
+  "minAgeRecommended": 12,
+  "expansions": [],
+  "photo": "maracaibo"
+},{
+  "_id": {
+    "$oid": "62a99d9504c73fa64af10558"
+  },
+  "name": "Settlers of Catan",
+  "editorial": "Devir",
+  "author": [
+    "Klaus Teuber"
+  ],
+  "numPlayers": {
+    "min": 3,
+    "max": 4
+  },
+  "avgMinDuration": 60,
+  "minAgeRecommended": 10,
+  "expansions": [
+    "Cities and knights",
+    "Traders and barbarians",
+    "Explorers and pirates",
+    "5 and 6 players"
+  ],
+  "photo": "settlersOfCatan"
+},{
+  "_id": {
+    "$oid": "62a99dcb04c73fa64af1055a"
+  },
+  "name": "Through the ages",
+  "editorial": "Devir",
+  "author": [
+    "Vlaada Chvátil"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 4
+  },
+  "avgMinDuration": 120,
+  "minAgeRecommended": 14,
+  "expansions": [
+    "New leaders and wonders"
+  ],
+  "photo": "throughTheAges"
+},{
+  "_id": {
+    "$oid": "62a99e1c04c73fa64af1055c"
+  },
+  "name": "Clash of cultures",
+  "editorial": "Maldito games",
+  "author": [
+    "Christian Marcussen"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 4
+  },
+  "avgMinDuration": 180,
+  "minAgeRecommended": 14,
+  "expansions": [
+    ""
+  ],
+  "photo": "clashOfCultures"
+},{
+  "_id": {
+    "$oid": "62a99e3804c73fa64af1055e"
+  },
+  "name": "Agricola",
+  "editorial": "Homoludicus",
+  "author": [
+    "Uwe Rosenberg"
+  ],
+  "numPlayers": {
+    "min": 1,
+    "max": 5
+  },
+  "avgMinDuration": 120,
+  "minAgeRecommended": 12,
+  "expansions": [
+    "Farmers of the Moor"
+  ],
+  "photo": "agricola"
+},{
+  "_id": {
+    "$oid": "62a99e4c04c73fa64af10560"
+  },
+  "name": "K2",
+  "editorial": "Masqueoca",
+  "author": [
+    "Adam Kaluźa"
+  ],
+  "numPlayers": {
+    "min": 1,
+    "max": 5
+  },
+  "avgMinDuration": 60,
+  "minAgeRecommended": 13,
+  "expansions": [],
+  "photo": "k2"
+},{
+  "_id": {
+    "$oid": "62a99e8504c73fa64af10562"
+  },
+  "name": "7Wonders",
+  "editorial": "REPOS production",
+  "author": [
+    "Antoine Bauza"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 7
+  },
+  "avgMinDuration": 30,
+  "minAgeRecommended": 10,
+  "expansions": [
+    "Cities",
+    "Armada",
+    "Leaders",
+    "Wonder pack",
+    "Duel",
+    "Babel"
+  ],
+  "photo": "sevenWonders"
+},{
+  "_id": {
+    "$oid": "62a99eae04c73fa64af10564"
+  },
+  "name": "Dead of winter",
+  "editorial": "EDGE",
+  "author": [
+    "Isaac Vega",
+    "Jon Gilmore"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 5
+  },
+  "avgMinDuration": 120,
+  "minAgeRecommended": 14,
+  "expansions": [
+    "The long night",
+    "Warring colonies"
+  ],
+  "photo": "deadOfWinter"
+},{
+  "_id": {
+    "$oid": "62a99ec604c73fa64af10566"
+  },
+  "name": "Scythe",
+  "editorial": "Maldito games",
+  "author": [
+    "Jamey Stegmaier"
+  ],
+  "numPlayers": {
+    "min": 1,
+    "max": 5
+  },
+  "avgMinDuration": 115,
+  "minAgeRecommended": 14,
+  "expansions": [
+    "The wind gambit",
+    "Invaders from afar",
+    "The rise of Fenris",
+    "Encounters"
+  ],
+  "photo": "scythe"
+},{
+  "_id": {
+    "$oid": "62a99eed04c73fa64af10568"
+  },
+  "name": "Secret code",
+  "editorial": "Devir",
+  "author": [
+    "Vlaada Chvátil"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 8
+  },
+  "avgMinDuration": 15,
+  "minAgeRecommended": 14,
+  "expansions": [
+    ""
+  ],
+  "photo": "secretCode"
+},{
+  "_id": {
+    "$oid": "62a9a0dd04c73fa64af1056d"
+  },
+  "name": "Civilization",
+  "editorial": "Fantasy flight",
+  "author": [
+    "Kevin Wilson"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 5
+  },
+  "avgMinDuration": 120,
+  "minAgeRecommended": 13,
+  "expansions": [
+    "Fame and fortune",
+    "Wisdom and warfare"
+  ],
+  "photo": "civilization"
+},{
+  "_id": {
+    "$oid": "62ac5337a92e11212a3965b9"
+  },
+  "name": "Junta",
+  "editorial": "Masqueoca",
+  "author": [
+    "V. Tsao",
+    "B. Grossman",
+    "E. Goldberg"
+  ],
+  "numPlayers": {
+    "min": 2,
+    "max": 7
+  },
+  "avgMinDuration": 120,
+  "minAgeRecommended": 16,
+  "expansions": [],
+  "photo": "junta"
+}]

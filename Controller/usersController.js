@@ -45,7 +45,7 @@ router.get("/:id", verifyToken, (req, res) => {
 });
 //POST insert document
 router.post("/", verifyToken, (req, res) => {
-  if (req.payload.role == "admin") {
+  // if (req.payload.role == "admin") {
     const data = new Model({
       first_name: req.body.first_name,
       last_name: req.body.last_name,
@@ -74,13 +74,13 @@ router.post("/", verifyToken, (req, res) => {
           error: "the insertion has failed",
         });
       });
-  } else {
-    res.status(403).json({
-      status: "failed",
-      data: [],
-      error: "you have not permissions",
-    });
-  }
+  // } else {
+  //   res.status(403).json({
+  //     status: "failed",
+  //     data: [],
+  //     error: "you have not permissions",
+  //   });
+  // }
 });
 //PATCH update document
 router.patch("/:id", verifyToken, (req, res) => {

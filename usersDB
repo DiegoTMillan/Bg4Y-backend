@@ -1,0 +1,257 @@
+[{
+  "_id": {
+    "$oid": "62ad9f82e4de71827918f893"
+  },
+  "first_name": "Kerr",
+  "last_name": "Bourgaize",
+  "email": "kbourgaize7@topsy.com",
+  "password": "nEDKbTUW",
+  "phone": "386-302-6359",
+  "city": "Estepona",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Settlers of Catan",
+    "Dead of Winter",
+    "K2"
+  ],
+  "photo": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+},{
+  "_id": {
+    "$oid": "62ad9f82e4de71827918f894"
+  },
+  "first_name": "Willamina",
+  "last_name": "Kaes",
+  "email": "wkaes8@nba.com",
+  "password": "khKklG3sld22",
+  "phone": "669-947-8801",
+  "city": "Estepona",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Maracaibo",
+    "K2"
+  ],
+  "photo": "https://images.pexels.com/photos/1687675/pexels-photo-1687675.jpeg?cs=srgb&dl=pexels-viviana-escobar-1687675.jpg&fm=jpg"
+},{
+  "_id": {
+    "$oid": "62ad9f82e4de71827918f895"
+  },
+  "first_name": "Mark",
+  "last_name": "Yea",
+  "email": "myea9@cargocollective.com",
+  "password": "aNiRHOP",
+  "phone": "525-855-8112",
+  "city": "Marbella",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Secret code",
+    "Scythe",
+    "Through the ages"
+  ],
+  "photo": "https://images.pexels.com/photos/59196/pexels-photo-59196.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62b1ef42ab8614a1c0db096e"
+  },
+  "first_name": "Marcos",
+  "last_name": "Ramírez",
+  "email": "fer1@cia.com",
+  "password": "$2b$10$y7S4pxvQBsxJUxZhrsGc6OestSYdqjJVZgASaxLGIPSCEt8WhRSxe",
+  "phone": "777-77-90-789",
+  "city": "Malaga",
+  "district": "Malaga",
+  "role": "user",
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "game_name": [
+    "7Wonders",
+    "Dead of winter",
+    "Scythe"
+  ]
+},{
+  "_id": {
+    "$oid": "62b1f8995b79a0732eb33337"
+  },
+  "first_name": "Jamaal",
+  "last_name": "Wheatland",
+  "email": "ej@ej.ej",
+  "password": "$2b$10$H6ugxPjrmhTSten2iJt.W.ayFQXdIlL.D018Xlmg.0CXAqXTGFGNW",
+  "phone": "277-240-8739",
+  "city": "Marbella",
+  "district": "Malaga",
+  "role": "user",
+  "__v": 0,
+  "game_name": [
+    "Settlers of Catan",
+    "Through the ages",
+    "Secret code"
+  ],
+  "photo": "https://images.pexels.com/photos/730353/pexels-photo-730353.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c02a4b472edae191dd1d5e"
+  },
+  "first_name": "Merril",
+  "last_name": "Birchett",
+  "email": "mbirchett0@network.org",
+  "password": "$2b$10$MkYC.2OGJpTT5q/lt4W1reueHg14M0c1XAv0IKfSOss3kXJk7BLqq",
+  "phone": "845-855-6956",
+  "city": "Marbella",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Civilization",
+    "Junta"
+  ],
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/3785424/pexels-photo-3785424.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c02b17472edae191dd1d62"
+  },
+  "first_name": "Kim",
+  "last_name": "Romney",
+  "email": "kromney2@niht.govo",
+  "password": "$2b$10$KuZ.jUTxIduPQJOIa7xcBeb2Xmf/vneuPofC96Ekmhrcv5GoGVhOy",
+  "phone": "514-366-9127",
+  "city": "Marbella",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Civilization",
+    "Junta"
+  ],
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/3764152/pexels-photo-3764152.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c02b5f472edae191dd1d64"
+  },
+  "first_name": "Audre",
+  "last_name": "Gerrad",
+  "email": "agerrad7@ebay.co.uk",
+  "password": "$2b$10$t3EP8coiixzkEtJBAdCZouiGDmNzXZyvairDXh1jcDIoy/MR.9S1q",
+  "phone": "101-588-2543",
+  "city": "Malaga",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "K2"
+  ],
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/3772506/pexels-photo-3772506.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c02bba472edae191dd1d68"
+  },
+  "first_name": "Quentin",
+  "last_name": "Skittrall",
+  "email": "qskittrall4@buzzfeed.co",
+  "password": "$2b$10$CcZIqvClZ2N2nDmrWCjoCuo3KuEYZdh8wI/ArxzjIFi8yoh9EqIJ2",
+  "phone": "209-563-3070",
+  "city": "Malaga",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "7Wonders",
+    "Scythe",
+    "Clash of cultures"
+  ],
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c02ed6472edae191dd1d6a"
+  },
+  "first_name": "Rich",
+  "last_name": "Suthren",
+  "email": "rsuthre5@state.gov",
+  "password": "$2b$10$25pReVl66o1RQwFo5D7ymuvHI5MrzuFjvv.xvJD3Bnb384gnKoIUS",
+  "phone": "964-652-6497",
+  "city": "Malaga",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Scythe",
+    "Agricola"
+  ],
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/11499781/pexels-photo-11499781.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c02f60472edae191dd1d6c"
+  },
+  "first_name": "Dermot",
+  "last_name": "Glason",
+  "email": "dglason78@gizmodo.com",
+  "password": "$2b$10$wgqisZXhLko1VTKYTYabvO2hgE7yI5y.kyqg3u2oB4kC7e6aJzsbi",
+  "phone": "532-723-6112",
+  "city": "Estepona",
+  "district": "Malaga",
+  "role": "user",
+  "game_name": [
+    "Agricola",
+    "Settlers of Catan"
+  ],
+  "__v": 0,
+  "photo": "https://images.pexels.com/photos/262391/pexels-photo-262391.jpeg?auto=compress&cs=tinysrgb&w=1600"
+},{
+  "_id": {
+    "$oid": "62c0325071076542e5bf2d02"
+  },
+  "first_name": "Robert",
+  "last_name": "Graves",
+  "email": "robgrev27@cargocollective.com",
+  "password": "$2b$10$9sedXPYDaeSRM3w6jFVqXemmFI3UEhhOqriwH1KlAfSNx6I6MOMiq",
+  "phone": "525-855-8369",
+  "city": "Málaga",
+  "district": "Malaga",
+  "role": "user",
+  "photo": "https://images.pexels.com/photos/10153295/pexels-photo-10153295.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "game_name": [
+    "Civilization",
+    "Agricola",
+    "Junta"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cd45163423b937f202b8f9"
+  },
+  "first_name": "Cecil",
+  "last_name": "Bruce",
+  "email": "robert@bruce.jp",
+  "password": "$2b$10$zdPeSLEfejKctUXs9uRnuO.ixES2rEuQ1L/wmW25NEVTKs.S0nlwq",
+  "phone": "611-111-111",
+  "city": "Estepona",
+  "district": "Malaga",
+  "role": "user",
+  "photo": "https://images.pexels.com/photos/356147/pexels-photo-356147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "game_name": [
+    "Maracaibo",
+    "Through the ages",
+    "Clash of cultures"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cdad8fdcd065d76e861aa1"
+  },
+  "first_name": "Carlos",
+  "last_name": "Martinez",
+  "email": "car@mar.com",
+  "password": "$2b$10$4z9b2FjNqsPem1GuLN1uWOZlIF1gwpLosYKBNgi1r4JXNLqWLi38y",
+  "phone": "666-777-888",
+  "city": "Marbella",
+  "district": "Malaga",
+  "role": "user",
+  "photo": "https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "game_name": [
+    "Secret code",
+    "Civilization",
+    "Junta"
+  ],
+  "__v": 0
+}]
