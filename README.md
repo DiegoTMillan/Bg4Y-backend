@@ -106,7 +106,7 @@ for author, and expansions I prefer to use arrays because there is variety with 
 |127.0.0.1:8000/boardgames/id|PATCH|update an item by id|
 |127.0.0.1:8000/boardgames/id|DELETE|delete an item by id|
 
-1. ### Users
+2. ### Users
 
 - An example of a user document:
 
@@ -133,7 +133,7 @@ for author, and expansions I prefer to use arrays because there is variety with 
 |127.0.0.1:8000/users/id|PATCH|update an item by id|
 |127.0.0.1:8000/users/id|DELETE|delete an item by id|
 
-1. ### Login 
+3. ### Login 
 
 - An example of login endpoints:
 
@@ -142,6 +142,10 @@ for author, and expansions I prefer to use arrays because there is variety with 
 |127.0.0.1:8000/login/new|POST|register of a new login|
 |127.0.0.1:8000/login|POST|just login with user and password|
 |127.0.0.1:8000/login/refresh|POST|refresh token|
+
+4. ### Database files
+
+There are two files with both databases: boardgamesDB and userDB
 
 
 
